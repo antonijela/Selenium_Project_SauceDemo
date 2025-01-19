@@ -20,7 +20,6 @@ public class ProductsPage extends BaseTest {
         productDetailsPage = new ProductDetailsPage();
     }
 
-    //ELEMENTS
     @FindBy(className = "app_logo")
     public WebElement logo;
 

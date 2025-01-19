@@ -28,18 +28,11 @@ public class LoginPage extends BaseTest {
     @FindBy(css = "[data-test=\"error\"]")
     public WebElement invalidDataNotification;
 
-    public void typeUsername(String username){
+    public void login(String username, String password){
         usernameField.clear();
         usernameField.sendKeys(username);
-    }
-    public void typePassword(String password){
         passwordField.clear();
         passwordField.sendKeys(password);
-    }
-
-    public void login(String username, String password){
-        typeUsername(username);
-        typePassword(password);
         loginButton.click();
     }
 }

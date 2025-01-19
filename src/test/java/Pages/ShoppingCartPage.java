@@ -85,11 +85,6 @@ public class ShoppingCartPage extends BaseTest {
         Assert.assertFalse(isItemCountDisplayed);
     }
 
-    public void removeEachProductFromTheCart(){
-        for (int i = 0; i < removeButton.size(); i++){
-            removeButton.get(i).click();
-        }
-    }
     public void clickOnContinueShoppingButton(){
         continueShoppingButton.click();
     }
@@ -127,7 +122,6 @@ public class ShoppingCartPage extends BaseTest {
     }
 
     public void verifyCartTotal() {
-
         double totalCalculatedItemPrice = 0.0;
         for (WebElement price : productPrice) {
             String priceText = price.getText().replace("$", "");
